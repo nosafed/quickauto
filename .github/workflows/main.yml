@@ -58,8 +58,8 @@ jobs:
 
       - name: 下载最新版 worker.js
         run: |
-          curl -L -o origin.js "https://github.com/byJoey/cfnew/releases/download/${{ env.latest_tag }}/Pages.zip"
-          unzip ./Pages.zip
+          curl -L -o origin.js "https://raw.githubusercontent.com/byJoey/cfnew/refs/heads/main/%E5%B0%91%E5%B9%B4%E4%BD%A0%E7%9B%B8%E4%BF%A1%E5%85%89%E5%90%97" _worker.js 
+          
 
           # 添加伪变更，确保 Git 能识别为更新
           echo "// Auto obfuscated at $(date -u)" >> _worker.js
