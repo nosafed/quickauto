@@ -62,7 +62,7 @@ jobs:
 
       - name: 解压文件
         run: |
-          unzip Pages.zip
+          unzip ./Pages.zip
 
           # 添加伪变更，确保 Git 能识别为更新
           echo "// Auto obfuscated at $(date -u)" >> _worker.js
